@@ -10,7 +10,6 @@
 
 // 5) quadratic(a, b, c): roots of ax^2 + bx + c = 0
 
-
 // ----- Helpers -----
 function $(id) { return document.getElementById(id); }
 function setText(id, value) { $(id).textContent = String(value); }
@@ -47,3 +46,22 @@ function onQuadraticClick() {
   const roots = quadratic(a, b, c);
   setText('outQuadratic', Array.isArray(roots) ? roots.join(', ') : roots);
 }
+
+
+//code
+let counter = 0;
+
+const numFunc = document.getElementById("btnMyFunc");
+const numRandom = document.getElementById("maxRand");
+const numAdder_x = document.getElementById("addX");
+const numAdder_y = document.getElementById("addY");
+const numDistance_x1 = document.getElementById("x1");
+const numDistance_x2 = document.getElementById("x2");
+const numDistance_y1 = document.getElementById("y1");
+const numDistance_y2 = document.getElementById("y2");
+const numQuadratic_a = document.getElementById("qa");
+const numQuadratic_b = document.getElementById("qb");
+const numQuadratic_c = document.getElementById("qc");
+
+
+
