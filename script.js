@@ -33,7 +33,9 @@ function onMyFuncClick() {
 function onRandomClick() {
   const max = $('maxRand').value;
   function getRandomNum(max) {
-    return Math.floor(Math.random() * (max - 0 + 1)) + 0;
+    const numMax = parseInt(max);
+    if (isNaN(numMax) || numMax < 1) return 0;
+    return Math.floor(Math.random() * numMax) + 1;
   }
   const val = getRandomNum(max);
   setText('outRandom', val);
