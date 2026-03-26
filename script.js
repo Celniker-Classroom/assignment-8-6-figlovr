@@ -42,6 +42,9 @@ function onRandomClick() {
 function onAdderClick() {
   const x = $('addX').value;
   const y = $('addY').value;
+    function myAdder(x, y) {
+  return Number(x) + Number(y);
+    }
   const sum = myAdder(x, y);
   setText('outAdder', sum);
 }
@@ -49,6 +52,9 @@ function onAdderClick() {
 function onDistanceClick() {
   const x1 = $('x1').value, y1 = $('y1').value;
   const x2 = $('x2').value, y2 = $('y2').value;
+    function distance(x1, y1, x2, y2) {
+      return Math.hypot(x2 - x1, y2 - y1);
+    }
   const d = distance(x1, y1, x2, y2);
   setText('outDistance', d);
 }
