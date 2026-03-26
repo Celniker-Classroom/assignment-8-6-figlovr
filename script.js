@@ -64,6 +64,16 @@ function onDistanceClick() {
 function onQuadraticClick() {
   const a = $('qa').value, b = $('qb').value, c = $('qc').value;
   const roots = quadratic(a, b, c);
+    function quadratic(a, b, c) {
+      const discriminant = b * b - 4 * a * c;
+      if (discriminant < 0) {
+        return "No real roots";
+      }
+      const sqrtDiscriminant = Math.sqrt(discriminant);
+      const root1 = (-b + sqrtDiscriminant) / (2 * a);
+      const root2 = (-b - sqrtDiscriminant) / (2 * a);
+      return [root1, root2];
+    }
   setText('outQuadratic', Array.isArray(roots) ? roots.join(', ') : roots);
 }
 
